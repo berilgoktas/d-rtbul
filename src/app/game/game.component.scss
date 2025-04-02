@@ -1,0 +1,153 @@
+.game-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(237, 100, 166, 0.1);
+
+  h1 {
+    text-align: center;
+    color: #d53f8c;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+}
+
+.game-rules {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #fed7e2;
+
+  h3 {
+    margin-top: 0;
+    color: #b83280;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      color: #97266d;
+    }
+  }
+}
+
+.game-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #fed7e2;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #d53f8c;
+    }
+  }
+
+  button {
+    padding: 12px 24px;
+    background-color: #d53f8c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #b83280;
+    }
+  }
+}
+
+.message {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 20px;
+  color: #97266d;
+  font-weight: 500;
+  background-color: #fed7e2;
+  border-radius: 6px;
+}
+
+.game-history {
+  margin-top: 30px;
+
+  h3 {
+    color: #b83280;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #fed7e2;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    .attempt {
+      font-weight: 500;
+      color: #97266d;
+    }
+
+    .result {
+      color: #d53f8c;
+      font-weight: 500;
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reset-button, .show-answer-button {
+  padding: 14px 28px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button {
+  background-color: #ed64a6;
+
+  &:hover {
+    background-color: #d53f8c;
+  }
+}
+
+.show-answer-button {
+  background-color: #9f7aea;
+
+  &:hover {
+    background-color: #805ad5;
+  }
+}

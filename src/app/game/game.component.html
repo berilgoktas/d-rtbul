@@ -1,0 +1,42 @@
+<div class="game-container">
+  <h1>4 Basamaklı Sayı Tahmin Oyunu</h1>
+  
+  <div class="game-rules">
+    <h3>Oyun Kuralları:</h3>
+    <ul>
+      <li>4 basamaklı bir sayı tahmin etmeye çalışın</li>
+      <li>Her rakam sadece bir kez kullanılabilir</li>
+      <li>Sayı 0 ile başlayamaz</li>
+      <li>+ işareti: Doğru rakam doğru yerde</li>
+      <li>- işareti: Doğru rakam yanlış yerde</li>
+    </ul>
+  </div>
+
+  <div class="game-input" *ngIf="!gameOver">
+    <input 
+      type="text" 
+      [(ngModel)]="userGuess" 
+      maxlength="4" 
+      placeholder="4 basamaklı bir sayı girin"
+      (keyup.enter)="checkGuess()"
+    >
+    <button (click)="checkGuess()">Tahmin Et</button>
+  </div>
+
+  <div class="message" *ngIf="message">
+    {{ message }}
+  </div>
+
+  <div class="game-history" *ngIf="attempts.length > 0">
+    <h3>Tahminleriniz:</h3>
+    <div class="history-item" *ngFor="let attempt of attempts; let i = index">
+      <span class="attempt">{{ attempt }}</span>
+      <span class="result">{{ results[i] }}</span>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button class="reset-button" (click)="resetGame()">Yeni Oyun</button>
+    <button class="show-answer-button" (click)="showAnswer()" *ngIf="!gameOver">Cevabı Göster</button>
+  </div>
+</div>
